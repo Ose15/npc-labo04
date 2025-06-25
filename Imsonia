@@ -1,0 +1,142 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1746421374178
+  modified: 1746421374178
+collection:
+  - name: Clients
+    meta:
+      id: fld_b645ae4bac5c4e9fab258b4b8eb4ba36
+      created: 1750045561209
+      modified: 1750656591876
+      sortKey: -1750045561209
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIzOTM5NTEyZC00ZWVhLTRjNmUtOTEwNS1lOTVkOGE0NDgwZTUiLCJyb2xlIjoiQ0xJRU5UIiwiZXhwIjoxNzUwOTE1Nzc2fQ.Tu5ULJlhd4VA80VMT1zBqMsjyPOeylFsYoq-F_E3Lak
+      prefix: Bearer
+  - name: Users
+    meta:
+      id: fld_a249a3a2773e4c23ad7687a8d4d62c1d
+      created: 1750569964633
+      modified: 1750647759055
+      sortKey: -1750569964633
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIzZGQxNmU0MC0xNzhmLTRmZGItODJkZS03MjE5YWRjNGQ2NGUiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NTA5MDY5Mzl9.wPmalcjFaAp2AtClmkZzcTfWgTL-axLw9oPjtIuvXiE
+      prefix: Bearer
+  - name: Branches
+    meta:
+      id: fld_32869fa5cb4241d099e788882a8c017e
+      created: 1750726162939
+      modified: 1750726162939
+      sortKey: -1750726162939
+  - name: Keycloak
+    meta:
+      id: fld_99e83226b18c4053b5e3447e6159e48e
+      created: 1750793544493
+      modified: 1750793544493
+      sortKey: -1750793544493
+    children:
+      - url: http://localhost:8080/api/demo/register
+        name: register
+        meta:
+          id: req_992bcbac10b14bda8a20d383099e12e6
+          created: 1750793549202
+          modified: 1750812172584
+          isPrivate: false
+          sortKey: -1750793560972
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "username": "Graciela",
+              "email": "graciela@example.com",
+              "first_name": "Graciwela",
+              "last_name": "Graciela123",
+              "password": "Password1"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/demo/login?username=Graciela&password=Password1
+        name: login
+        meta:
+          id: req_a184de5d32a041448cc749e3dd51d185
+          created: 1750794318183
+          modified: 1750812174913
+          isPrivate: false
+          sortKey: -1750761402289.5
+        method: POST
+        body:
+          mimeType: application/x-www-form-urlencoded
+        headers:
+          - name: Content-Type
+            value: application/x-www-form-urlencoded
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/demo/auth-test
+        name: validation
+        meta:
+          id: req_c9539048ccd244c698effc9e933aea94
+          created: 1750794622412
+          modified: 1750812170187
+          isPrivate: false
+          sortKey: -1750793561072
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJCRzBCX01YYlpCWVF4WkxaLWFOYU5WMjlUdU9jaTdxcTIwZTh1dmhRT3lVIn0.eyJleHAiOjE3NTA3OTUwMzcsImlhdCI6MTc1MDc5NDczNywianRpIjoib25ydHJvOjZjNmIyM2UyLTdlM2MtNDUxMi04NzMzLTJhNDE3MWIzYzBlMyIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAzMC9yZWFsbXMvYWRtaW4tcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDQ1MGE5NTAtMjA2MC00NmI3LTg5MzYtYWQzYTM1NTg5MjNkIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYmFja2VuZC1jbGllbnQiLCJzaWQiOiI3NzlhZGI3MC0xNTI2LTQ4NDEtOTFlNC1kZTUyNmVkNjUxZTkiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJyb2wtZXhhbXBsZSIsImRlZmF1bHQtcm9sZXMtYWRtaW4tcmVhbG0iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJHcmFjaXdlbGEgR3JhY2llbGExMjMiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJncmFjaWVsYSIsImdpdmVuX25hbWUiOiJHcmFjaXdlbGEiLCJmYW1pbHlfbmFtZSI6IkdyYWNpZWxhMTIzIiwiZW1haWwiOiJncmFjaWVsYUBleGFtcGxlLmNvbSJ9.rn054DE5hA3uz0fXbWRDo4bJyplg9A62WAd3YIIO8nGm_ZgDaKPwN_qAacEVz2lIPkcHjwaw12Fp3k23PtFCf39RY0UBElD3E1g_4oRg3YwDKwJtl9ge7ePuG5AqoBbf-sBZZYafQa9z3470P6X-6xBsI8XnbtvEoiwdjYgdxib4_8ebE-w7mtws0_owPqcMfMaPcEjdSYXd83huKEvqZnMQMjeSZxXy1P8zMGQwtVseyRh-WSd3fuA9WC2CIwOEO3rit_vf8fqhPV7jwHuuZuRhyurxQbZZ2qqwyJOByD0AxZX29AN2uF7bHJKfoCekeAenO1CiZx25Lu0yECf8VQ
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1746422883403
+    modified: 1750794398317
+  cookies:
+    - key: JSESSIONID
+      value: 7BC6A2E1E61A78B95FED11EDCFC9AF42
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-06-24T19:46:38.316Z
+      lastAccessed: 2025-06-24T19:46:38.316Z
+      id: 00b3d319-068a-474d-a519-58a291324fa3
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1746422882881
+    modified: 1746422882881
+    isPrivate: false
